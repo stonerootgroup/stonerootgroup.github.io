@@ -92,7 +92,7 @@ html {
 
 .display-table{ display: table; height: 100%; width: 100%; }
 
-.display-table-cell{ display: table-cell; vertical-align: middle; }
+.display-table-cell{ display: table-cell; vertical-align: baseline; }
 
 
 
