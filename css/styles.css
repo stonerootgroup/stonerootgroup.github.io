@@ -90,7 +90,7 @@ html {
 
 .center-text{ text-align: center; } 
 
-.display-table{ display: table; height: 100%; width: 100%; }
+.display-table{ display: table; width: 100%; }
 
 .display-table-cell{ display: table-cell; vertical-align: baseline; }
 
