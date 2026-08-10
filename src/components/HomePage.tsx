@@ -62,7 +62,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="contact section" id="contacto"><p className="kicker">05 / CONTÁCTANOS</p><h2>¿Qué proceso, idea o problema quieres <em>mejorar?</em></h2><p>Cuéntanos dónde estás perdiendo tiempo, clientes o visibilidad. Lo convertimos en una solución concreta.</p><Link className="contact-link" href="/contact"><span>Iniciar una conversación</span><b>↗</b></Link></section>
+      <section className="contact section" id="contacto"><p className="kicker">05 / CONTÁCTANOS</p><h2>¿Qué proceso, idea o problema quieres <em>mejorar?</em></h2><p>Cuéntanos dónde estás perdiendo tiempo, clientes o visibilidad. Lo convertimos en una solución concreta.</p><Link className="contact-link" href="/contact"><span>Iniciar una conversación</span><ArrowUpRight aria-hidden="true" /></Link></section>
     </>
   );
 }
