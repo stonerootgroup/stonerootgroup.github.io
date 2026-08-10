@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteContent } from "@/lib/site-content";
 
 const flow = [
@@ -12,17 +13,17 @@ export function HomePage() {
   return (
     <>
       <section className="hero section" id="inicio">
+        <Image
+          className="hero-image"
+          src="/images/stoneroot-hero-v4.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
         <div className="hero-copy">
-          <p className="eyebrow"><i /> {siteContent.company.tagline}</p>
-          <h1>Convertimos procesos manuales en <em>soluciones que escalan.</em></h1>
-          <p className="lead">Ayudamos a empresas a automatizar procesos, implementar inteligencia artificial, construir experiencias digitales y operar de forma más eficiente.</p>
-          <div className="actions"><Link className="button" href="/contact">Hablemos <span>↗</span></Link><a className="button button-ghost" href="#servicios">Ver servicios</a></div>
-          <div className="proof"><span>Enfoque empresarial</span><span>Soluciones a la medida</span><span>De la idea a producción</span></div>
-        </div>
-        <div className="system-card" aria-label="Flujo de transformación digital">
-          <div className="card-top"><span className="signal" /><span>OPERACIÓN CONECTADA</span><span>EN VIVO</span></div>
-          <h2>Personas, procesos, datos e IA trabajando como un solo sistema.</h2>
-          <div className="flow">{flow.map(([title, body, state], index) => <article key={title}><b>{String(index + 1).padStart(2, "0")}</b><span><strong>{title}</strong><small>{body}</small></span><i>{state}</i></article>)}</div>
+          <h1>Procesos inteligentes. <em>Soluciones que escalan.</em></h1>
+          <p className="lead">Automatización, inteligencia artificial y soluciones digitales para operar mejor.</p>
         </div>
       </section>
 
@@ -48,6 +49,13 @@ export function HomePage() {
         <p className="kicker">04 / CÓMO TRABAJAMOS</p>
         <div className="section-heading"><h2>De una necesidad a una solución funcionando.</h2><p>Un proceso simple para reducir incertidumbre, acelerar decisiones y mantener el foco en resultados.</p></div>
         <div className="steps"><article><b>01</b><small>ENTENDER</small><h3>Discovery</h3><p>Entendemos el problema, los usuarios y el resultado esperado.</p></article><article><b>02</b><small>DISEÑAR</small><h3>Solution Blueprint</h3><p>Definimos la solución, alcance, integraciones y prioridades.</p></article><article><b>03</b><small>CONSTRUIR</small><h3>Build & Automate</h3><p>Desarrollamos, configuramos, integramos y probamos.</p></article><article><b>04</b><small>ESCALAR</small><h3>Launch & Improve</h3><p>Publicamos, medimos resultados y evolucionamos.</p></article></div>
+        <div className="system-card process-system" aria-label="Flujo de transformación digital">
+          <div>
+            <div className="card-top"><span className="signal" /><span>OPERACIÓN CONECTADA</span><span>EN VIVO</span></div>
+            <h2>Personas, procesos, datos e IA trabajando como un solo sistema.</h2>
+          </div>
+          <div className="flow">{flow.map(([title, body, state], index) => <article key={title}><b>{String(index + 1).padStart(2, "0")}</b><span><strong>{title}</strong><small>{body}</small></span><i>{state}</i></article>)}</div>
+        </div>
       </section>
 
       <section className="contact section" id="contacto"><p className="kicker">05 / CONTÁCTANOS</p><h2>¿Qué proceso, idea o problema quieres <em>mejorar?</em></h2><p>Cuéntanos dónde estás perdiendo tiempo, clientes o visibilidad. Lo convertimos en una solución concreta.</p><Link className="contact-link" href="/contact"><span>Iniciar una conversación</span><b>↗</b></Link></section>
