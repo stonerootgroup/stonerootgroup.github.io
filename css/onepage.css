@@ -18,6 +18,7 @@
 .hero-copy{position:relative;z-index:2;width:min(690px,62%)}
 .process-system{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;max-width:none;margin-top:42px;padding:38px}
 .process-system h2{margin-bottom:0}
+.process-system .card-top span:last-child{margin-left:0;color:#8fa4af}
 
 @media(max-width:900px){
   .hero-copy{width:min(630px,78%)}

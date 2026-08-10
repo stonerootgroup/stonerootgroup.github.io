@@ -55,7 +55,7 @@ export function HomePage() {
         <div className="steps"><article><b>01</b><small>ENTENDER</small><h3>Discovery</h3><p>Entendemos el problema, los usuarios y el resultado esperado.</p></article><article><b>02</b><small>DISEÑAR</small><h3>Solution Blueprint</h3><p>Definimos la solución, alcance, integraciones y prioridades.</p></article><article><b>03</b><small>CONSTRUIR</small><h3>Build & Automate</h3><p>Desarrollamos, configuramos, integramos y probamos.</p></article><article><b>04</b><small>ESCALAR</small><h3>Launch & Improve</h3><p>Publicamos, medimos resultados y evolucionamos.</p></article></div>
         <div className="system-card process-system" aria-label="Flujo de transformación digital">
           <div>
-            <div className="card-top"><span className="signal" /><span>OPERACIÓN CONECTADA</span><span>EN VIVO</span></div>
+            <div className="card-top"><span className="signal" /><span>MODELO DE OPERACIÓN CONECTADA</span></div>
             <h2>Personas, procesos, datos e IA trabajando como un solo sistema.</h2>
           </div>
           <div className="flow">{flow.map(([title, body, state], index) => <article key={title}><b>{String(index + 1).padStart(2, "0")}</b><span><strong>{title}</strong><small>{body}</small></span><i>{state}</i></article>)}</div>
