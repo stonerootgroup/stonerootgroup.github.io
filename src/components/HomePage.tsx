@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { siteContent } from "@/lib/site-content";
 
 const flow = [
@@ -24,6 +25,9 @@ export function HomePage() {
         <div className="hero-copy">
           <h1>Procesos inteligentes. <em>Soluciones que escalan.</em></h1>
           <p className="lead">Automatización, inteligencia artificial y soluciones digitales para operar mejor.</p>
+          <Link className="button hero-cta" href="/contact">
+            Hablemos <ArrowUpRight aria-hidden="true" />
+          </Link>
         </div>
       </section>
 
@@ -37,11 +41,11 @@ export function HomePage() {
         <p className="kicker">02 / SOLUCIONES PARA ARRANCAR</p>
         <div className="section-heading"><h2>Empieza con un problema concreto. Nosotros construimos el camino.</h2><p>Paquetes pensados para reducir fricción y acelerar la entrega de valor desde el primer proyecto.</p></div>
         <div className="solution-list">{siteContent.solutions.map((solution, index) => <article key={solution.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{solution.title}</h3><p>{solution.body}</p></div><small>{solution.tag}</small></article>)}</div>
-        <Link className="text-link" href="/solutions">Explorar todas las soluciones <span>↗</span></Link>
+        <Link className="text-link" href="/solutions#soluciones-top">Ver soluciones en detalle <ArrowRight aria-hidden="true" /></Link>
       </section>
 
       <section className="section why" id="nosotros">
-        <div><p className="kicker">03 / POR QUÉ STONEROOT</p><h2>No empezamos por la tecnología. Empezamos por tu operación.</h2><p className="lead">Una buena solución no solo resuelve el problema de hoy. Deja una base para automatizar más, integrar mejor y aprovechar IA en el futuro.</p><div className="metric"><b>1→∞</b><span>Construimos para que puedas crecer.</span></div></div>
+        <div><p className="kicker">03 / POR QUÉ STONEROOT</p><h2>No empezamos por la tecnología. Empezamos por conocerte.</h2><p className="lead">Una buena solución no solo resuelve el problema de hoy. Deja una base para automatizar más, integrar mejor y aprovechar IA en el futuro.</p><div className="metric"><b>1→∞</b><span>Construimos para que puedas crecer.</span></div></div>
         <div className="principles"><article><b>01</b><h3>Visión de negocio + ejecución técnica</h3><p>Entendemos el proceso antes de diseñar la solución.</p></article><article><b>02</b><h3>Soluciones integradas</h3><p>Web, CRM, automatización, datos e IA como un solo sistema.</p></article><article><b>03</b><h3>Entrega incremental</h3><p>Priorizamos valor temprano en lugar de proyectos eternos.</p></article><article><b>04</b><h3>Tecnología con propósito</h3><p>Elegimos las herramientas que mejor encajan con tu negocio.</p></article></div>
       </section>
 
