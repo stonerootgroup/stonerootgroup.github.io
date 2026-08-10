@@ -2,6 +2,10 @@ export const siteContent = {
   company: {
     name: "StoneRoot Group",
     email: "contacto@stonerootgroup.com",
+    phone: {
+      display: "+57 313 339 5697",
+      href: "tel:+573133395697",
+    },
     tagline: "AI · Automatización · Soluciones Digitales",
   },
   nav: [
