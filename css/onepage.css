@@ -15,6 +15,7 @@
 .hero{position:relative;isolation:isolate;display:flex;align-items:center;overflow:hidden}
 .hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#07131b 0%,rgba(7,19,27,.97) 34%,rgba(7,19,27,.65) 58%,rgba(7,19,27,.08) 100%)}
 .hero-image{z-index:0;object-fit:cover;object-position:center right}
+.hero-media{position:absolute;inset:0;z-index:0}
 .hero-copy{position:relative;z-index:2;width:min(690px,62%)}
 .process-system{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;max-width:none;margin-top:42px;padding:38px}
 .process-system h2{margin-bottom:0}
@@ -57,6 +58,12 @@
 /* Informational solution categories, not interactive controls */
 .solution-list small{display:inline-flex;align-items:center;justify-self:end;gap:8px;padding:0;border:0;color:#7a654d;font:600 9px Manrope;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
 .solution-list small:before{content:"";width:5px;height:5px;border-radius:50%;background:#b9864f}
+.service-grid article>b{color:#78919d}
+.steps b{color:#607d8a}
+.solutions .kicker{color:#70461f}
+.solutions .section-heading p,.solution-list p{color:#59656c}
+.solution-list>article>span{color:#76502c}
+.solution-list small{color:#684c2f}
 .text-link svg,.contact-link svg{width:20px;height:20px;flex:0 0 auto;color:var(--orange);stroke-width:2}
 .contact-link svg{width:28px;height:28px}
 @media(max-width:600px){

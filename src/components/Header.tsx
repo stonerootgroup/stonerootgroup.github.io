@@ -12,7 +12,7 @@ export function Header() {
       </nav>
       <Link className="button button-small header-cta" href="/contact">Contáctanos</Link>
       <details className="mobile-menu">
-        <summary aria-label="Abrir navegación"><Menu size={19} /> Menú</summary>
+        <summary aria-label="Menú"><Menu size={19} /> Menú</summary>
         <nav aria-label="Navegación móvil">
           {siteContent.nav.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
           <Link className="button" href="/contact">Contáctanos</Link>

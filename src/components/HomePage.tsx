@@ -14,19 +14,24 @@ export function HomePage() {
   return (
     <>
       <section className="hero section" id="inicio">
-        <Image
-          className="hero-image"
-          src="/images/stoneroot-hero-v4.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-        />
+        <picture className="hero-media">
+          <source media="(max-width: 600px)" srcSet="/images/stoneroot-hero-v4-900.webp" type="image/webp" />
+          <source srcSet="/images/stoneroot-hero-v4-1600.webp" type="image/webp" />
+          <Image
+            className="hero-image"
+            src="/images/stoneroot-hero-v4.jpg"
+            alt=""
+            fill
+            fetchPriority="high"
+            loading="eager"
+            sizes="100vw"
+          />
+        </picture>
         <div className="hero-copy">
           <h1>Procesos inteligentes. <em>Soluciones que escalan.</em></h1>
           <p className="lead">Automatización, inteligencia artificial y soluciones digitales para operar mejor.</p>
           <Link className="button hero-cta" href="/contact">
-            Hablemos <ArrowUpRight aria-hidden="true" />
+            Contáctanos <ArrowUpRight aria-hidden="true" />
           </Link>
         </div>
       </section>
@@ -62,7 +67,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="contact section" id="contacto"><p className="kicker">05 / CONTÁCTANOS</p><h2>¿Qué proceso, idea o problema quieres <em>mejorar?</em></h2><p>Cuéntanos dónde estás perdiendo tiempo, clientes o visibilidad. Lo convertimos en una solución concreta.</p><Link className="contact-link" href="/contact"><span>Iniciar una conversación</span><ArrowUpRight aria-hidden="true" /></Link></section>
+      <section className="contact section" id="contacto"><p className="kicker">05 / CONTÁCTANOS</p><h2>¿Qué proceso, idea o problema quieres <em>mejorar?</em></h2><p>Cuéntanos dónde estás perdiendo tiempo, clientes o visibilidad. Lo convertimos en una solución concreta.</p><Link className="contact-link" href="/contact"><span>Contáctanos</span><ArrowUpRight aria-hidden="true" /></Link></section>
     </>
   );
 }
