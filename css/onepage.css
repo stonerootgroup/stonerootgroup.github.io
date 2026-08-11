@@ -69,3 +69,32 @@
 @media(max-width:600px){
   .solution-list small{justify-self:start}
 }
+
+/* Proof of work */
+.cases{max-width:none;padding-left:max(28px,calc((100% - var(--max))/2));padding-right:max(28px,calc((100% - var(--max))/2));background:linear-gradient(180deg,#091923 0%,#07131b 100%)}
+.cases-heading{grid-template-columns:minmax(0,820px);margin-bottom:52px}
+.case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.case-grid>article{display:flex;flex-direction:column;min-height:540px;padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(150deg,rgba(16,41,54,.72),rgba(7,19,27,.28))}
+.case-meta{display:flex;align-items:center;justify-content:space-between;color:#78919d;font:600 10px Manrope;letter-spacing:.12em}
+.case-meta small{color:var(--orange2);font-size:9px}
+.case-category{margin:50px 0 7px!important;color:#8fa4af!important;font:600 9px Manrope!important;letter-spacing:.15em;text-transform:uppercase}
+.case-grid h3{max-width:310px;margin:0 0 15px;font-size:27px;line-height:1.1}
+.case-summary{min-height:66px;margin:0!important;color:#aebdc5!important;font-size:14px!important}
+.case-journey{display:grid;grid-template-rows:repeat(5,42px);margin:28px 0 30px;padding:0;list-style:none;border-top:1px solid var(--line)}
+.case-journey li{position:relative;display:flex;align-items:center;padding:0 0 0 22px;border-bottom:1px solid rgba(40,64,78,.72);color:#d2dbe0;font-size:12px}
+.case-journey li:before{content:"";position:absolute;left:0;top:50%;width:7px;height:7px;border:1px solid var(--orange);transform:translateY(-50%) rotate(45deg)}
+.case-capabilities{display:grid;gap:8px;margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+.case-capabilities small{color:#78919d;font:600 9px Manrope;letter-spacing:.13em}
+.case-capabilities strong{color:var(--orange2);font-size:12px;font-weight:500}
+@media(max-width:900px){
+  .case-grid{grid-template-columns:1fr}
+  .case-grid>article{min-height:auto}
+  .case-summary{min-height:0}
+  .case-capabilities{margin-top:10px}
+}
+@media(max-width:600px){
+  .cases{padding-left:18px;padding-right:18px}
+  .case-grid>article{padding:24px}
+  .case-grid h3{font-size:25px}
+  .case-category{margin-top:34px!important}
+}

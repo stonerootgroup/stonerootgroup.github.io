@@ -11,6 +11,7 @@ export const siteContent = {
   nav: [
     { label: "Servicios", href: "/#servicios" },
     { label: "Soluciones", href: "/#soluciones" },
+    { label: "Casos", href: "/#casos" },
     { label: "Por qué StoneRoot", href: "/#nosotros" },
     { label: "Cómo trabajamos", href: "/#proceso" },
   ],

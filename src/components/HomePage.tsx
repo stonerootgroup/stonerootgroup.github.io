@@ -10,6 +10,33 @@ const flow = [
   ["Seguimiento", "Datos, dashboards y experiencia", "Visible"],
 ];
 
+const builtSolutions = [
+  {
+    title: "Nivora Billing",
+    category: "Automatización empresarial",
+    badge: "CASO REAL · NIVORA",
+    summary: "Aplicación de facturación y cuentas por cobrar que centraliza el ciclo operativo de Nivora.",
+    journey: ["Clientes", "Facturas", "Pagos", "Vencimientos", "Dashboard"],
+    capabilities: "Next.js · Azure SQL · Azure Container Apps",
+  },
+  {
+    title: "AI Document Intelligence",
+    category: "Inteligencia documental",
+    badge: "CASO ANONIMIZADO",
+    summary: "Conversión de documentos dispersos en información estructurada, consultable y útil para el negocio.",
+    journey: ["Documentos", "Extracción de datos", "Indexación", "Búsqueda inteligente", "Asistentes con IA"],
+    capabilities: "IA generativa · RAG · Búsqueda semántica",
+  },
+  {
+    title: "Portal empresarial",
+    category: "Aplicación empresarial",
+    badge: "CASO ANONIMIZADO",
+    summary: "Centralización de procesos internos en una experiencia web segura, integrada y medible.",
+    journey: ["Procesos internos", "Portal web", "Integraciones", "Usuarios", "Reporting"],
+    capabilities: "Aplicaciones web · APIs · Gestión de usuarios",
+  },
+];
+
 export function HomePage() {
   return (
     <>
@@ -49,13 +76,26 @@ export function HomePage() {
         <Link className="text-link" href="/solutions#soluciones-top">Ver soluciones en detalle <ArrowRight aria-hidden="true" /></Link>
       </section>
 
+      <section className="section cases" id="casos">
+        <p className="kicker">03 / SOLUCIONES CONSTRUIDAS</p>
+        <div className="section-heading cases-heading"><h2>De un problema operativo a una solución funcionando.</h2></div>
+        <div className="case-grid">{builtSolutions.map((item, index) => <article key={item.title}>
+          <div className="case-meta"><span>{String(index + 1).padStart(2, "0")}</span><small>{item.badge}</small></div>
+          <p className="case-category">{item.category}</p>
+          <h3>{item.title}</h3>
+          <p className="case-summary">{item.summary}</p>
+          <ol className="case-journey">{item.journey.map((step) => <li key={step}>{step}</li>)}</ol>
+          <div className="case-capabilities"><small>CAPACIDADES APLICADAS</small><strong>{item.capabilities}</strong></div>
+        </article>)}</div>
+      </section>
+
       <section className="section why" id="nosotros">
-        <div><p className="kicker">03 / POR QUÉ STONEROOT</p><h2>No empezamos por la tecnología. Empezamos por conocerte.</h2><p className="lead">Una buena solución no solo resuelve el problema de hoy. Deja una base para automatizar más, integrar mejor y aprovechar IA en el futuro.</p><div className="metric"><b>1→∞</b><span>Construimos para que puedas crecer.</span></div></div>
+        <div><p className="kicker">04 / POR QUÉ STONEROOT</p><h2>No empezamos por la tecnología. Empezamos por conocerte.</h2><p className="lead">Una buena solución no solo resuelve el problema de hoy. Deja una base para automatizar más, integrar mejor y aprovechar IA en el futuro.</p><div className="metric"><b>1→∞</b><span>Construimos para que puedas crecer.</span></div></div>
         <div className="principles"><article><b>01</b><h3>Visión de negocio + ejecución técnica</h3><p>Entendemos el proceso antes de diseñar la solución.</p></article><article><b>02</b><h3>Soluciones integradas</h3><p>Web, CRM, automatización, datos e IA como un solo sistema.</p></article><article><b>03</b><h3>Entrega incremental</h3><p>Priorizamos valor temprano en lugar de proyectos eternos.</p></article><article><b>04</b><h3>Tecnología con propósito</h3><p>Elegimos las herramientas que mejor encajan con tu negocio.</p></article></div>
       </section>
 
       <section className="section" id="proceso">
-        <p className="kicker">04 / CÓMO TRABAJAMOS</p>
+        <p className="kicker">05 / CÓMO TRABAJAMOS</p>
         <div className="section-heading"><h2>De una necesidad a una solución funcionando.</h2><p>Un proceso simple para reducir incertidumbre, acelerar decisiones y mantener el foco en resultados.</p></div>
         <div className="steps"><article><b>01</b><small>ENTENDER</small><h3>Discovery</h3><p>Entendemos el problema, los usuarios y el resultado esperado.</p></article><article><b>02</b><small>DISEÑAR</small><h3>Solution Blueprint</h3><p>Definimos la solución, alcance, integraciones y prioridades.</p></article><article><b>03</b><small>CONSTRUIR</small><h3>Build & Automate</h3><p>Desarrollamos, configuramos, integramos y probamos.</p></article><article><b>04</b><small>ESCALAR</small><h3>Launch & Improve</h3><p>Publicamos, medimos resultados y evolucionamos.</p></article></div>
         <div className="system-card process-system" aria-label="Flujo de transformación digital">
@@ -67,7 +107,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="contact section" id="contacto"><p className="kicker">05 / CONTÁCTANOS</p><h2>¿Qué proceso, idea o problema quieres <em>mejorar?</em></h2><p>Cuéntanos dónde estás perdiendo tiempo, clientes o visibilidad. Lo convertimos en una solución concreta.</p><Link className="contact-link" href="/contact"><span>Contáctanos</span><ArrowUpRight aria-hidden="true" /></Link></section>
+      <section className="contact section" id="contacto"><p className="kicker">06 / CONTÁCTANOS</p><h2>¿Qué proceso, idea o problema quieres <em>mejorar?</em></h2><p>Cuéntanos dónde estás perdiendo tiempo, clientes o visibilidad. Lo convertimos en una solución concreta.</p><Link className="contact-link" href="/contact"><span>Contáctanos</span><ArrowUpRight aria-hidden="true" /></Link></section>
     </>
   );
 }
